@@ -14,21 +14,24 @@ const services = [
 
 let bookings = []
 
+// Home route
 app.get("/", (req, res) => {
   res.send("Mechanic Business API is running")
 })
 
+// Services
 app.get("/services", (req, res) => {
   res.json(services)
 })
-})
 
+// Create booking
 app.post("/book", (req, res) => {
   const booking = req.body
   bookings.push(booking)
   res.json({ message: "Booking created" })
 })
 
+// Get bookings
 app.get("/bookings", (req, res) => {
   res.json(bookings)
 })
