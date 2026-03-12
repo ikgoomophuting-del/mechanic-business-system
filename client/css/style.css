@@ -1,1 +1,30 @@
+body{
 
+font-family: Arial;
+margin:40px;
+
+}
+
+nav a{
+
+margin-right:20px;
+font-weight:bold;
+
+}
+
+button{
+
+padding:10px;
+background:#0077ff;
+color:white;
+border:none;
+
+}
+
+input{
+
+display:block;
+margin:10px 0;
+padding:8px;
+
+}
