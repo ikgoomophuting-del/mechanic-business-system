@@ -14,8 +14,13 @@ const services = [
 
 let bookings = []
 
+app.get("/", (req, res) => {
+  res.send("Mechanic Business API is running")
+})
+
 app.get("/services", (req, res) => {
   res.json(services)
+})
 })
 
 app.post("/book", (req, res) => {
