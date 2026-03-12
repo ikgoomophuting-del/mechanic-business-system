@@ -18,13 +18,25 @@ let bookings = []
 app.get("/", (req, res) => {
   res.json({
     name: "Mechanic Business API",
+    description: "Backend API for mechanic workshop booking system",
     version: "1.0",
-    status: "Running",
-    endpoints: {
-      services: "/services",
-      create_booking: "/book",
-      view_bookings: "/bookings"
-    }
+    endpoints: [
+      {
+        method: "GET",
+        route: "/services",
+        description: "List available mechanic services"
+      },
+      {
+        method: "POST",
+        route: "/book",
+        description: "Create a service booking"
+      },
+      {
+        method: "GET",
+        route: "/bookings",
+        description: "View all bookings"
+      }
+    ]
   })
 })
 
