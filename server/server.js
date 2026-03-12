@@ -16,7 +16,16 @@ let bookings = []
 
 // Home route
 app.get("/", (req, res) => {
-  res.send("Mechanic Business API is running")
+  res.json({
+    name: "Mechanic Business API",
+    version: "1.0",
+    status: "Running",
+    endpoints: {
+      services: "/services",
+      create_booking: "/book",
+      view_bookings: "/bookings"
+    }
+  })
 })
 
 // Services
